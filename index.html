@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Martial Arts Games 2026 | Pattaya, Thailand</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--dark);
+            color: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--gold); margin-top: 10px; }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: -50px auto 50px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            border-left: 5px solid var(--gold);
+            padding-left: 15px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* Form Styling */
+        .form-section { margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        input:focus { border-color: var(--gold); outline: none; }
+
+        .btn {
+            background: var(--dark);
+            color: var(--gold);
+            width: 100%;
+            padding: 20px;
+            border: 1px solid var(--gold);
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--gold); color: var(--dark); }
+
+        /* Contact Section */
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #eee;
+            border-radius: 8px;
+        }
+        .contact-info a { color: #b08d26; font-weight: bold; text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--dark);
+            color: #777;
+            font-size: 0.8rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">WMAG 2026</div>
+        <div style="font-size: 0.8rem;">PATTAYA, THAILAND</div>
+    </nav>
+
+    <header class="hero">
+        <h1>Official Registration</h1>
+        <p>World Amateur Sports Council | June 19-21, 2026</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <form id="registrationForm">
+                <div class="form-section">
+                    <h2>1. Team & Submitter Details</h2>
+                    <div class="form-group">
+                        <label>Registering as:</label>
+                        <select id="role" required>
+                            <option value="athlete">Individual Athlete</option>
+                            <option value="coach">Coach / Team Manager</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Team / Club Name</label>
+                        <input type="text" id="team" placeholder="Enter Club Name" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>2. Athlete Information</h2>
+                    <div class="form-group">
+                        <label>Full Legal Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="grid">
+                        <div class="form-group">
+                            <label>Nationality</label>
+                            <input type="text" id="nation" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Weight Category (kg)</label>
+                            <input type="number" id="weight" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Discipline</label>
+                        <select id="discipline" required>
+                            <option value="Muay Thai">Muay Thai</option>
+                            <option value="Karate">Karate</option>
+                            <option value="BJJ">BJJ</option>
+                            <option value="Kickboxing">Kickboxing</option>
+                            <option value="Taekwondo">Taekwondo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Submit Official Entry</button>
+            </form>
+
+            <div id="success" style="display:none; text-align:center; padding: 40px;">
+                <h2 style="border:none; color: green;">Registration Sent!</h2>
+                <p>Thank you for your submission for the 2026 Games. Our committee will contact you shortly.</p>
+                <button onclick="location.reload()" style="background:none; border:none; color:blue; cursor:pointer; text-decoration:underline;">Register another athlete</button>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>For all official inquiries, email:</p>
+                <a href="mailto:worldamateursportscouncil@gmail.com">worldamateursportscouncil@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>WORLD AMATEUR SPORTS COUNCIL (WASC)</p>
+        <p>Medal Certificates Printed on Official 300 GSM Premium Cardstock</p>
+        <p>&copy; 2026 World Martial Arts Games - Pattaya, Thailand</p>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('success').style.display = 'block';
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+</body>
+</html>
